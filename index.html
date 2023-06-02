@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY-Tap Menu</title>
+  <link rel="stylesheet" href="./index_files/index.css">
+  <script src="./index_files/jquery-3.6.4.min.js.다운로드"></script>
+  <script src="./index_files/index.js.다운로드"></script>
+<style>.osSwitch{position:relative;display:inline-block;width:34px;height:15.3px}.osSwitch input{opacity:0;width:0;height:0}.osSlider{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:34px;background-color:#93a0b5;transition:0.4s}.osSlider:before{position:absolute;content:'';height:13px;width:13px;left:2px;bottom:1px;border-radius:50%;background-color:white;transition:0.4s}input:checked+.sliderGreen{background-color:#04d289}input:checked+.sliderRed{background-color:#ff3b30}input:not(:checked)+.defaultGreen{background-color:#04d289}input:checked+.osSlider:before{transform:translateX(17px)}
+</style><style>
+    @font-face {
+      font-family: 'SegoeUI_online_security'; 
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+    }
+
+    @font-face {
+      font-family: 'SegoeUI_bold_online_security'; 
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+    }
+</style></head>
+
+<body>
+
+  <div class="logo-section">
+    <h1><span>Outdoor</span> Sport Brands Logo</h1>
+    <div class="logo-pic">
+      <img src="./index_files/nike.jpg" class="active" data-img="tab1">
+      <img src="./index_files/adidas.jpg" data-img="tab2">
+      <img src="./index_files/newbalance.jpg" data-img="tab3">
+      <img src="./index_files/carhartt.jpg" data-img="tab4">
+    </div>
+    <div class="logo">
+      <div class="content active" id="tab1">
+        <p>
+          나이키(Nike)는 미국의 스포츠 용품 브랜드이다.대표 상품인 운동화를 비롯해 의류, 모자 등 다양한 제품을 판매한다. 현재 전 세계 스포츠 용품 시장에서 독보적인 1위 기업이며 미국을 대표하는 기업 중 하나이기도 하다.
+        </p>
+        <p>
+          NIKE
+        </p>
+      </div>
+      <div class="content" id="tab2">
+        <p>
+          아디다스(Adidas)는 독일의 스포츠 용품 제조사이다. 특유의 3선 트레이드 마크로 유명하다.유럽 최대의 제조업체로, 나이키 다음으로 세계에서 두 번째로 큰 스포츠웨어 제조 기업이다. 운동화를 비롯해 의류나 액세서리를 비롯한 다양한 제품을 판매한다.
+        </p>
+        <p>
+          ADIDAS
+        </p>
+      </div>
+      <div class="content" id="tab3">
+        <p>
+          미국 보스턴을 기반으로 한 스포츠 용품 회사.원래는 운동화를 전문적으로 생산하던 회사였으나 2010년 대 중반부터 사업 영역을 넓혀, 운동화는 물론 각종 스포츠화 및 의류도 생산한다
+        </p>
+        <p>
+          NEWBALANCE
+        </p>
+      </div>
+      <div class="content" id="tab4">
+        <p>
+          칼하트는 칼하트와 칼하트 WIP, 두 라인을 가지고 있다. 라인이라기 보다는 WIP는 미국 본사에서 독일의 지사에게 라이센스를 허해 준것이다. 칼하트 헤리티지라는 본사에서 진행하는 라인업이 따로 있고, 캐주얼 웨어로 따로 진행하는 라인도 있다.
+        </p>
+        <p>
+          CARHARRT
+        </p>
+      </div>
+    </div>
+  </div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
